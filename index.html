@@ -112,9 +112,8 @@
     siteFavicon.type = 'image/svg+xml';
     siteFavicon.href = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#38bdf8"/><text x="32" y="43" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#07111f">S</text></svg>');
   }
-  const savedProjectPhotos = JSON.parse(localStorage.getItem('subashProjectPhotos') || '[]');
   const initialProjectPhotos = [...projectGallery.querySelectorAll('img')].map((projectPhoto) => projectPhoto.getAttribute('src'));
-  renderProjectPhotos(savedProjectPhotos.length ? savedProjectPhotos : initialProjectPhotos);
+  renderProjectPhotos(initialProjectPhotos);
 
   photoInput?.addEventListener('change', (event) => {
     const selectedPhoto = event.target.files[0];
