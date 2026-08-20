@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#38bdf8">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#07111f">
+  <meta name="msapplication-TileColor" content="#38bdf8">
+  <link id="site-favicon" rel="icon" type="image/jpeg" href="your-photo.jpg">
+  <title>Subash S | Mechatronics & Automation Engineer</title>
+  <style>
+  *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+  body{font-family:'Trebuchet MS',Arial,sans-serif;background:linear-gradient(135deg,#07111f 0%,#0b1d31 52%,#07111f 100%);color:#f8fafc;line-height:1.6;animation:page-in .65s ease both}
+  a{text-decoration:none;color:inherit}
+  nav{position:fixed;top:0;left:0;width:100%;z-index:20;padding:16px 7%;display:flex;align-items:center;justify-content:space-between;background:rgba(7,17,31,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(56,189,248,.2);box-shadow:0 8px 28px rgba(0,0,0,.18)}
+  .logo{font-size:23px;font-weight:800;color:#38bdf8}
+  .nav{display:flex;gap:24px;list-style:none;align-items:center}
+  .nav a{font-size:14px;color:#cbd5e1}.nav a:hover{color:#38bdf8}
+  .download{border:1px solid #38bdf8;padding:9px 14px;border-radius:8px;color:#38bdf8!important}
+  .menu{display:none;font-size:27px}
+  .hero{min-height:100vh;padding:120px 7% 70px;display:flex;align-items:center;justify-content:space-between;gap:50px;background:radial-gradient(circle at 80% 25%,rgba(14,165,233,.2),transparent 32%),radial-gradient(circle at 10% 80%,rgba(45,212,191,.08),transparent 28%)}
+  .hero-text{max-width:680px;animation:hero-text-in .8s .12s ease both}.tag{color:#38bdf8;font-weight:700;letter-spacing:1.5px;font-size:14px}
+  h1{font-size:clamp(48px,7vw,78px);line-height:1.05;margin:12px 0}h1 span{color:#38bdf8}
+  .hero h2{font-size:28px;color:#dbeafe;margin-bottom:15px}.hero p{color:#94a3b8;font-size:17px;margin-bottom:25px}
+  .profile{width:310px;height:310px;border-radius:50%;padding:6px;background:#38bdf8;box-shadow:0 0 55px rgba(56,189,248,.2);animation:profile-in .9s .25s cubic-bezier(.2,.8,.2,1) both}
+  .profile img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+  .photo-upload{text-align:center;margin-top:14px}.photo-upload label{display:inline-block;padding:10px 16px;border:1px solid #38bdf8;border-radius:8px;color:#38bdf8;font-weight:700;cursor:pointer}.photo-upload label:hover{background:#38bdf8;color:#04111e}
+  .project-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:18px 0;overflow:visible}.project-photo{position:relative;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;cursor:pointer;transition:transform .3s ease,filter .3s ease,box-shadow .3s ease}.project-photo:hover{z-index:2;object-fit:contain;background:#07111f;transform:scale(3);
+  filter:brightness(1.08);box-shadow:0 22px 44px rgba(0,0,0,.45)}
+  .slide-viewer{display:none;position:fixed;inset:0;z-index:50;background:rgba(3,9,18,.96);align-items:center;justify-content:center;padding:72px 72px 64px;opacity:0;backdrop-filter:blur(8px)}.slide-viewer.open{display:flex;animation:viewer-in .22s ease forwards}.slide-image{max-width:min(1100px,90vw);max-height:78vh;object-fit:contain;border-radius:8px;opacity:0;transform:scale(.97);transition:opacity .25s ease,transform .25s ease;box-shadow:0 20px 60px rgba(0,0,0,.45)}.slide-image.slide-enter{opacity:1;transform:scale(1)}.slide-button{position:absolute;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:white;font-size:34px;line-height:1;padding:10px 18px;cursor:pointer;border-radius:8px;transition:background .2s ease,transform .2s ease}.slide-button:hover{background:#38bdf8;color:#04111e;transform:scale(1.06)}.slide-close{top:24px;right:28px}.slide-prev{left:24px}.slide-next{right:24px}.slide-count{position:absolute;bottom:24px;color:#cbd5e1;font-size:14px;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:999px}.slide-caption{position:absolute;top:24px;left:50%;transform:translateX(-50%);color:#e2e8f0;font-size:15px;font-weight:700;white-space:nowrap}@keyframes viewer-in{to{opacity:1}}@media(max-width:600px){.slide-viewer{padding:64px 48px 56px}.slide-button{font-size:24px;padding:8px 12px}.slide-prev{left:10px}.slide-next{right:10px}.slide-close{top:14px;right:14px}.slide-caption{top:18px;font-size:13px;max-width:70vw;overflow:hidden;text-overflow:ellipsis}}
+  @keyframes page-in{from{opacity:0}to{opacity:1}}@keyframes hero-text-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes profile-in{from{opacity:0;transform:translateY(18px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes section-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}@keyframes widget-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes menu-slide-up{from{opacity:.45;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}.menu-slide-up{animation:menu-slide-up .65s ease both!important}@media(prefers-reduced-motion:reduce){*,*::before{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+   .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.tags span{background:#13283e;color:#7dd3fc;padding:6px 11px;border-radius:20px;font-size:12px}
+  .experience-company{display:inline-block;margin-right:6px;padding:3px 8px;border:1px solid #38bdf8;border-radius:999px;color:#7dd3fc;font-size:12px;font-weight:700}
+  section{padding:85px 7%;animation:section-in .7s ease both}section:nth-of-type(2){animation-delay:.18s}section:nth-of-type(3){animation-delay:.28s}section:nth-of-type(4){animation-delay:.38s}section:nth-of-type(5){animation-delay:.48s}section:nth-of-type(6){animation-delay:.58s}section:nth-of-type(7){animation-delay:.68s}.title{text-align:center;margin-bottom:45px}.title h2{font-size:38px}.title span{color:#38bdf8}.title p{color:#94a3b8}
+  .grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .card,.project,.resume-card,.education{--float-x:0px;--float-y:0px;background:rgba(12,26,43,.86);border:1px solid rgba(125,211,252,.18);border-radius:14px;padding:25px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;transform:translate(var(--float-x),var(--float-y));box-shadow:0 12px 30px rgba(0,0,0,.16)}.card h3,.project h3,.resume-card h3{color:#38bdf8;margin-bottom:9px}.card p,.project p,.resume-card p,.education p{color:#aebccc}.card:hover,.project:hover,.resume-card:hover,.education:hover{transform:translate(var(--float-x),calc(var(--float-y) - 8px)) scale(1.02);border-color:#38bdf8;box-shadow:0 18px 36px rgba(0,0,0,.34)}
+  .education{max-width:900px;margin:0 auto 15px;border-left:3px solid #38bdf8;border-radius:0 12px 12px 0}
+  .resume-wrap{max-width:1000px;margin:auto}.resume-card{padding:35px;display:grid;grid-template-columns:1.5fr .8fr;gap:30px;align-items:center;border:2px solid #38bdf8;box-shadow:0 0 28px rgba(56,189,248,.12)}
+  .resume-list{list-style:none;color:#cbd5e1;margin:15px 0}.resume-list li{margin:7px 0}.resume-list li::before{content:"✓";color:#38bdf8;font-weight:bold;margin-right:9px}
+  .letter-drop-char{display:inline-block;opacity:0;transform:translateY(-24px);animation:letter-drop .45s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--letter-index) * .035s)}@keyframes letter-drop{to{opacity:1;transform:translateY(0)}}
+  @keyframes page-in{from{opacity:0}to{opacity:1}}@keyframes hero-text-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes profile-in{from{opacity:0;transform:translateY(18px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes section-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}@keyframes widget-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes nav-about-in{from{opacity:0;transform:translateY(34px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes nav-skills-in{from{opacity:0;transform:translateY(20px) rotateX(8deg)}to{opacity:1;transform:translateY(0) rotateX(0)}}@keyframes nav-project-in{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes nav-resume-in{from{opacity:0;transform:translateY(28px) translateX(16px)}to{opacity:1;transform:translateY(0) translateX(0)}}@keyframes nav-education-in{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}@keyframes nav-contact-in{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}.nav-home-reveal .hero-text{animation:hero-text-in .65s ease both!important}.nav-home-reveal .profile{animation:profile-in .75s .1s ease both!important}.nav-about-reveal .card{animation:nav-about-in .55s ease both!important}.nav-about-reveal .card:nth-child(2){animation-delay:.1s}.nav-skills-reveal .card{animation:nav-skills-in .5s ease both!important}.nav-skills-reveal .card:nth-child(even){animation-delay:.1s}.nav-project-reveal .project{animation:nav-project-in .65s ease both!important}.nav-resume-reveal .resume-card{animation:nav-resume-in .65s ease both!important}.nav-education-reveal .education{animation:nav-education-in .5s ease both!important}.nav-education-reveal .education:nth-child(2){animation-delay:.1s}.nav-education-reveal .education:nth-child(3){animation-delay:.2s}.nav-contact-reveal .contact{animation:nav-contact-in .6s ease both!important}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;width:max-content;max-width:100%}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 18px;border-radius:8px;font-weight:700;letter-spacing:.2px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.22)}.btn.primary{background:#38bdf8;color:#04111e;border:1px solid #38bdf8}.btn.primary:hover{background:#7dd3fc}.btn.outline{background:transparent;color:#7dd3fc;border:1px solid #38bdf8}.btn.outline:hover{background:rgba(56,189,248,.12)}.resume-actions{display:flex;flex-direction:column;gap:12px}.resume-actions .btn{text-align:center}
+  .contact{max-width:900px;margin:auto;text-align:center}.links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px}.links a{padding:11px 16px;border:1px solid #334155;border-radius:8px;color:#cbd5e1}.links a:hover{border-color:#38bdf8;color:#38bdf8}
+  footer{text-align:center;padding:28px;color:#64748b;border-top:1px solid #17283a}
+  @media(max-width:800px){.nav{display:none}.menu{display:block}.hero{flex-direction:column-reverse;text-align:center;padding-left:5%;padding-right:5%}.profile{width:230px;height:230px}.btns{justify-content:center}.resume-card{grid-template-columns:1fr}section{padding:65px 5%}}
+  @media print{
+  nav,.btns,.resume-actions,footer{display:none!important}body{background:white;color:#111}.hero{min-height:auto;padding:20px 0}.hero p,.card p,.project p,.resume-card p,.education p{color:#333}.profile{width:180px;height:180px;box-shadow:none}section{padding:28px 0}.card,.project,.resume-card,.education{background:white;border:1px solid #bbb;break-inside:avoid}.title{margin-bottom:20px}
+  }
+  </style>
+  </head>
+  <body>
+  <nav>
+  <a class="logo" href="#home">SUBASH S</a>
+  <div class="menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</div>
+  <ul class="nav">
+  <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#resume">Resume</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+ <li><a class="download" href="Subash_Resume.pdf" download="Subash_Resume.pdf">↓ Download Resume</a></li>
+  </ul>
+  </nav>
+  
+  <section class="hero" id="home">
+  <div class="hero-text">
+  <div class="tag">MECHATRONICS & AUTOMATION ENGINEER | VISUAL CREATOR</div>
+  <h1>Hi, I'm <span>Subash S</span></h1>
+  <h2>B.E. Mechatronics Engineering Student</h2>
+  <p>Passionate about mechanical design, automation, robotics and creating practical engineering solutions. Specialized in AutoCAD, 2D drafting, 3D modeling and mechatronics systems.</p>
+ <div class="btns"><a class="btn primary" href="#projects">View My Work</a><a class="btn outline" href="Subash_Resume.pdf" download="Subash_Resume.pdf">Download Resume</a></div>
+  </div>
+ <div><div class="profile"><img id="profile-photo" src="your-photo.jpg.png" alt="Subash S"></div></div></section>  
+  <section id="about"><div class="title"><h2>About <span>Me</span></h2><p>Engineering & Technical Identity</p></div>
+  <div class="grid"><div class="card"><h3>Who I Am</h3><p>I am a second-year B.E. Mechatronics Engineering student at Coimbatore Institute of Engineering and Technology. My interests include mechanical CAD, technical drafting, 3D modeling, automation, robotics and control systems.</p></div>
+  <div class="card"><h3>Career Objective</h3><p>Seeking an internship opportunity to apply engineering knowledge, strengthen CAD and design proficiency, and gain practical industry exposure in a professional environment.</p></div></div></section>
+  
+  <section id="skills"><div class="title"><h2>Technical <span>Skills</span></h2><p>Tools and technologies</p></div>
+  <div class="grid"><div class="card"><h3>AutoCAD</h3><p>2D technical drafting</p></div><div class="card"><h3>3D CAD</h3><p>Mechanical modeling</p></div><div class="card"><h3>C Programming</h3><p>Programming fundamentals</p></div><div class="card"><h3>Python</h3><p>Programming and automation basics</p></div><div class="card"><h3>Java</h3><p>Basic programming</p></div><div class="card"><h3>HTML</h3><p>Responsive web development</p></div><div class="card"><h3>Engineering Drawing</h3><p>Design fundamentals</p></div><div class="card"><h3>Microsoft Office</h3><p>Technical documentation</p></div></div></section>
+  
+  <section id="projects"><div class="title"><h2>Featured <span>Project</span></h2></div>
+  <div class="project"><h3>2D & 3D Drafting Modelling</h3><div id="project-gallery" class="project-gallery"><img class="project-photo" src="Screenshot 2026-08-16 194115.png" alt="AutoCAD floor plan project"></div><p>CAD-focused engineering design work involving 2D technical drafting and 3D mechanical modeling, demonstrating understanding of engineering drawings, CAD models and mechanical design principles.</p><div class="tags"><span>AutoCAD</span><span>2D Drafting</span><span>3D Modeling</span><span>Mechanical Design</span><span>Engineering Drawing</span><span>architecture draftsman</span></div></div></section>
+  <section id="experience"><div class="title"><h2>My <span>Experience</span></h2><p>Academic and practical engineering development</p></div><div class="grid"><div class="card"><h3>CAD Design Practice</h3><p>Developed 2D technical drawings and 3D mechanical models using AutoCAD and engineering design principles.</p></div><div class="card"><h3>Project Experience (Corizo intern)</h3><p>Developed 2D, 3D modeling,architecture draftand mechanical drawings for machine components with precise geometric tolerances.</p></div><div class="card"><h3>Engineering Development</h3><p>Built foundations in mechatronics, programming, automation, robotics, and control systems through academic learning.</p></div></div></section>
+  <div id="slide-viewer" class="slide-viewer" role="dialog" aria-modal="true" aria-labelledby="slide-caption" aria-hidden="true"><div id="slide-caption" class="slide-caption">Project picture</div><button class="slide-button slide-close" type="button" aria-label="Close slideshow">&times;</button><button class="slide-button slide-prev" type="button" aria-label="Previous picture">&#10094;</button><img id="slide-image" class="slide-image" alt="Project picture"><button class="slide-button slide-next" type="button" aria-label="Next picture">&#10095;</button><div id="slide-count" class="slide-count" aria-live="polite"></div></div>
+  
+  <section id="resume"><div class="title"><h2>Professional <span>Resume</span></h2><p>Download a print-friendly PDF version of my resume</p></div>
+  <div class="resume-wrap"><div class="resume-card"><div><h3>Subash S — Mechatronics & Automation</h3><p>Professional resume covering education, CAD and programming skills, project experience, interests and career objective.</p>
+  <ul class="resume-list"><li>B.E. Mechatronics Engineering — CGPA 7.89</li><li>AutoCAD 2D Drafting & 3D CAD Modeling</li><li>C, Python, Java Basics & HTML</li><li>CAD-based engineering design experience</li><li>Interests: Automation, Robotics, CAD/CAM</li></ul></div>
+ <div class="resume-actions"><a class="btn primary" href="#projects">View My Work</a><a class="btn primary" href="Subash_Resume.pdf" download="Subash_Resume.pdf">↓ Download Resume</a><a class="btn outline" href="Subash_Resume.html" target="_blank">View Resume</a><button class="btn outline" onclick="window.print()">Print Portfolio</button></div>
+  </div></div></section>
+  
+  <section id="education"><div class="title"><h2>My <span>Education</span></h2></div>
+  <div class="education"><h3>B.E. Mechatronics Engineering</h3><p><b>Coimbatore Institute of Engineering and Technology, Narasimapuram</b></p><p>2nd Year – 3rd Semester | CGPA: <b>7.89</b></p></div>
+  <div class="education"><h3>Higher Secondary (12th)</h3><p>St. Andrew's Matric Higher Secondary School, Thirumanthurai | 84.3%</p></div>
+  <div class="education"><h3>SSLC (10th)</h3><p>St. Andrew's Matric Higher Secondary School, Thirumanthurai | 80.6%</p></div></section>
+  
+  <section id="contact"><div class="title"><h2>Let's <span>Connect</span></h2><p>Open to internships, projects and learning opportunities.</p></div>
+  <div class="contact"><p>📞 +91 84387 52253 &nbsp; | &nbsp; ✉ Subashmukesh576@gmail.com &nbsp; | &nbsp; Tittakudi, Cuddalore, Tamil Nadu</p><div class="links"><a href="https://github.com/subash576" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/subash-suresh-a50843375" target="_blank">LinkedIn</a><a href="mailto:Subashmukesh576@gmail.com">Email</a></div></div></section>
+  <footer>© 2026 Subash S. | Mechatronics & Automation Engineer | Visual Creator</footer>
+  <script>
+  const photoInput = document.querySelector('#photo-input');
+  const profilePhoto = document.querySelector('#profile-photo');
+  const projectGallery = document.querySelector('#project-gallery');
+  const slideViewer = document.querySelector('#slide-viewer');
+  const slideImage = document.querySelector('#slide-image');
+  const slideCount = document.querySelector('#slide-count');
+  const slideCaption = document.querySelector('#slide-caption');
+  let slideSources = [];
+  let slideIndex = 0;
+  const siteFavicon = document.querySelector('#site-favicon');
+  const savedPhoto = localStorage.getItem('subashProfilePhoto');
+  if (savedPhoto && profilePhoto) profilePhoto.src = savedPhoto;
+  if (savedPhoto && siteFavicon) {
+    siteFavicon.type = 'image/png';
+    siteFavicon.href = savedPhoto;
+  } else if (siteFavicon) {
+    siteFavicon.type = 'image/svg+xml';
+    siteFavicon.href = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#38bdf8"/><text x="32" y="43" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#07111f">S</text></svg>');
+  }
+  const savedProjectPhotos = JSON.parse(localStorage.getItem('subashProjectPhotos') || '[]');
+  renderProjectPhotos(savedProjectPhotos.length ? savedProjectPhotos : [projectGallery.querySelector('img').src]);
+
+  photoInput?.addEventListener('change', (event) => {
+    const selectedPhoto = event.target.files[0];
+    if (!selectedPhoto) return;
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      if (profilePhoto) profilePhoto.src = reader.result;
+      try { localStorage.setItem('subashProfilePhoto', reader.result); } catch (error) { console.warn('Profile photo is too large to save permanently.'); }
+    });
+    reader.readAsDataURL(selectedPhoto);
+  });
+
+  function renderProjectPhotos(photoSources) {
+    slideSources = photoSources;
+    projectGallery.innerHTML = '';
+    photoSources.forEach((photoSource, index) => {
+      const projectPhoto = document.createElement('img');
+      projectPhoto.className = 'project-photo';
+      projectPhoto.src = photoSource;
+      projectPhoto.alt = `Project picture ${index + 1}`;
+      projectPhoto.addEventListener('click', () => openSlide(index));
+      projectGallery.appendChild(projectPhoto);
+    });
+  }
+
+  function openSlide(index) {
+    slideIndex = index;
+    slideImage.classList.remove('slide-enter');
+    slideImage.onload = () => requestAnimationFrame(() => slideImage.classList.add('slide-enter'));
+    slideImage.src = slideSources[slideIndex];
+    slideCount.textContent = `${slideIndex + 1} / ${slideSources.length}`;
+    slideCaption.textContent = `Project picture ${slideIndex + 1}`;
+    slideViewer.classList.add('open');
+    slideViewer.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeSlide() {
+    slideViewer.classList.remove('open');
+    slideViewer.setAttribute('aria-hidden', 'true');
+  }
+
+  document.querySelector('.slide-close').addEventListener('click', closeSlide);
+  document.querySelector('.slide-prev').addEventListener('click', () => openSlide((slideIndex - 1 + slideSources.length) % slideSources.length));
+  document.querySelector('.slide-next').addEventListener('click', () => openSlide((slideIndex + 1) % slideSources.length));
+  slideViewer.addEventListener('click', (event) => { if (event.target === slideViewer) closeSlide(); });
+  document.addEventListener('keydown', (event) => {
+    if (!slideViewer.classList.contains('open')) return;
+    if (event.key === 'Escape') closeSlide();
+    if (event.key === 'ArrowLeft') openSlide((slideIndex - 1 + slideSources.length) % slideSources.length);
+    if (event.key === 'ArrowRight') openSlide((slideIndex + 1) % slideSources.length);
+  });
+
+  function dropHeadingLetters(section) {
+    section.querySelectorAll('h1, h2, h3').forEach((heading) => {
+      const existingLetters = heading.querySelectorAll('.letter-drop-char');
+      if (existingLetters.length) {
+        existingLetters.forEach((letter, index) => {
+          letter.classList.remove('letter-drop-char');
+          void letter.offsetWidth;
+          letter.classList.add('letter-drop-char');
+          letter.style.setProperty('--letter-index', index);
+        });
+        return;
+      }
+      const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
+      const textNodes = [];
+      while (walker.nextNode()) textNodes.push(walker.currentNode);
+      let letterIndex = 0;
+      textNodes.forEach((textNode) => {
+        const fragment = document.createDocumentFragment();
+        [...textNode.textContent].forEach((character) => {
+          if (character === ' ') {
+            fragment.appendChild(document.createTextNode(' '));
+            return;
+          }
+          const letter = document.createElement('span');
+          letter.className = 'letter-drop-char';
+          letter.style.setProperty('--letter-index', letterIndex++);
+          letter.textContent = character;
+          fragment.appendChild(letter);
+        });
+        textNode.replaceWith(fragment);
+      });
+    });
+  }
+
+  document.querySelectorAll('.nav a[href^="#"]').forEach((navigationLink) => {
+    navigationLink.addEventListener('click', (event) => {
+      const targetSection = document.querySelector(navigationLink.getAttribute('href'));
+      if (!targetSection) return;
+      event.preventDefault();
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      dropHeadingLetters(targetSection);
+    });
+  });
+
+  document.querySelectorAll('.card, .project, .resume-card, .education').forEach((widget) => {
+    widget.addEventListener('pointermove', (event) => {
+      const bounds = widget.getBoundingClientRect();
+      const offsetX = ((event.clientX - bounds.left) / bounds.width - 0.5) * 8;
+      const offsetY = ((event.clientY - bounds.top) / bounds.height - 0.5) * 8;
+      widget.style.setProperty('--float-x', `${offsetX}px`);
+      widget.style.setProperty('--float-y', `${offsetY}px`);
+    });
+    widget.addEventListener('pointerleave', () => {
+      widget.style.setProperty('--float-x', '0px');
+      widget.style.setProperty('--float-y', '0px');
+    });
+  });
+
+  </script>
+  </body></html>
